@@ -10,6 +10,17 @@ public class SplitLesson {
 		System.out.println(data[1]);//みかん
 		System.out.println(data[2]);//ばなな
 
+		//数字(文字列)をint型配列にする
+		/*基本文字列を区切るのに使われる*/
+		str ="1,2,3,4,5,";
+		data =str.split(,);
+		System.out.println(Arrays.toString(data));
+		int[] nums =new int[data.length];
+		for(int i=0;i<nums.length;i++){
+      nums[i]=Integer.paeseInt(data[i]);
+		}
+		System.out.println(Arrays.toString(nums));
+
   //「と」で分割
 		str="さるといぬときじ";
 		data=str.split("と");

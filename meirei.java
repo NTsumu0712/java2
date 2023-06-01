@@ -74,11 +74,11 @@ public class Meirei{
 																						 
 		//書式を使って文字列を作成する
 		String fmt = String.format("%d:%s:%.1f",10,"Hello",20.235);
-	
- 　//文字列操作で使われるsplit
-	 //文字列の言葉をそれぞれデータとして扱い
-	 //配列にしまう例文
-	/*仕切り壁になる部分を選択する感じ！*/
+
+    //文字列操作に使用するsplitの使い方
+		//文字列のそれぞれの言葉を１つ１つデータとして
+		//配列に入れていく例文
+  	/*仕切り壁になる部分を選択する感じ！*/
 		String str="りんご,みかん,ばなな";
 		String[] data=str.split(",");
 		System.out.println(data.length);//3
