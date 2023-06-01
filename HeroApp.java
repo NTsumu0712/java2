@@ -22,14 +22,30 @@ public class HeroApp{
 		ms[1]=mb;
 		ms[2]=new Matango();
     ms[2].hp=30;
-		ms[2].suffix='C';
+	  ms[2].suffix='C';
+    
+		ma.run();
+    mb.run();
 
 		for(Matango m : ms){
 			m.run();
 		}
+		h1.attack(ms[0]);
 
-		ma.run();
-		mb.run();
+		Sword s = new Sword();
+		s.name="炎の剣";
+		s.damage=10;
+
+
+		Cleric cleric =new Cleric();
+		cleric.name="ククール";
+
+		cleric.mp -=20;
+    cleric.selfAid();
+
+		cleric.pray(3);
+
+    cleric.selfAid();
 
 		h1.slip();
 		h2.slip();

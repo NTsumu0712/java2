@@ -7,4 +7,7 @@ public class Matango{
 		System.out.println("おばけキノコ"+this.suffix+"は、逃げ出した");
 
 	}
+	public void appear(){
+    System.out.println("おばけキノコ%s(%d)があらわれた！%n",this.suffix,this.hp);
+	}
 }
