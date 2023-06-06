@@ -28,23 +28,22 @@ public class FruitsApp{
 			Fruits f = new Fruits(name,price);
 			data[i]= f;
 		}
-		//合計を管理する変数
-		int sum =0;
 		for(Fruits f :data){
 			f.showInfo();
-			//合計金額に個別の金額を加算
-			sum +=f.price;
 		}
-		System.out.printf("合計は%d円です。%n",sum);
+		System.out.printf("合計は%d円です。%n",Fruits.total);
 	}
 }
 
 class Fruits{
+//Staticフィールド、クラスメンバー、静的フィールド
+  static int total=0;
 	String name;
 	int price;
 	public Fruits(String name,int price){
 		this.name = name;
 		this.price = price;
+		total += this.price;
 	}
 	public void showInfo(){
 		System.out.printf("%s(%d円)%n",this.name,this.price);
