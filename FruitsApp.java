@@ -36,8 +36,9 @@ public class FruitsApp{
 }
 
 class Fruits{
-//Staticフィールド、クラスメンバー、静的フィールド
-  static int total=0;
+//Staticフィールド、クラスメンバー、静的フィールド,クラスフィールド
+  static int total=0;//メモリ空間に一つだけ
+	//インスタンスフィールド
 	String name;
 	int price;
 	public Fruits(String name,int price){

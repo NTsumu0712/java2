@@ -4,10 +4,9 @@ public class ArcherApp{
 		Random rand = new Random();
 		Scanner sc = new Scanner(System.in);
 		Archer[] archers = new Archer[10];
-		char suffix = 'A';
 		for(int i=0;i<archers.length;i++){
 			int power = rand.nextInt(51)+50;
-			archers[i] = new Archer(suffix++,power);
+			archers[i] = new Archer(power);
 		}
 		Castle c = new Castle(750);
 		for(Archer a : archers){
@@ -23,10 +22,12 @@ public class ArcherApp{
 	}
 }
 class Archer{
+	static char alph = 'A';
 	char suffix;
 	int power;
-	public Archer(char suffix,int power){
-		this.suffix=suffix;
+	public Archer(int power){
+		this.suffix=alph;
+		alph++;
 		this.power=power;
 		System.out.printf("アーチャー%s(%d)が戦闘に加わった!%n",this.suffix,this.power);
 	}
